@@ -4,7 +4,16 @@
 ## Overview
 * This project implements a **production-style ETL (Extract, Transform, Load) pipeline** using Apache Spark on Databricks.
 * The pipeline ingests ball by ball, player and match data from multiple sources, performs data cleaning, joins datasets, computes aggregated metrics.
+* Processed ball-by-ball IPL data spanning multiple seasons (~100K+ records)
 * Implemented notebook-based orchestration using dbutils to simulate DAG execution.
+
+
+## Project Highlights
+- Designed and implemented an end-to-end ETL pipeline using Apache Spark
+- Processed multi-source IPL datasets into structured Bronze, Silver, and Gold layers
+- Performed complex transformations using Spark SQL (joins, aggregations, window functions)
+- Built notebook-based orchestration to simulate production DAG workflows
+- Optimized data storage using Parquet with partitioning
 
 
 ## Problem Statement
@@ -17,15 +26,6 @@ The pipeline enables insights such as:
 * Top batsman per season
 * Powerplay Bowler Efficiency
 * Toss impact on the match
-
-
-## Key-Features
-- End-to-end ETL pipeline using Spark
-- Layered architecture (Bronze, Silver, Gold)
-- SQL-based analytical transformations
-- Optimized storage using Parquet format
-- Partitioning for performance improvement
-- Notebook-based orchestration
 
 
 ## Pipeline Structure
@@ -110,6 +110,20 @@ Applied aggregation logic to generate analytics-ready datasets including:
 * Top batsmen per Season
 * Bowlers Efficiency in Powerplay overs
 * Impact on the match result based on the toss
+
+
+## Sample Outputs
+
+### Batsman Performance
+Shows total runs, strike rate, and balls faced per batsman.
+
+### Bowler Performance
+Displays economy rate, wickets, and overs bowled.
+
+### Match Summary
+Aggregated match-level insights including total runs and teams.
+
+(Screenshots available in /screenshots folder)
 
 
 ## How to Run
